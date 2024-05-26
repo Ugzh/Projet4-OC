@@ -1,0 +1,395 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: black;
+  padding-bottom: 10px;
+}
+
+.header {
+  position: relative;
+  height: 63px;
+}
+.header__h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 30px;
+  color: black;
+  padding: 15px 0 15px 0;
+  text-align: center;
+}
+.header__home {
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+.header__home i {
+  font-size: 24px;
+  color: #353535;
+}
+
+.mainHeader img {
+  display: block;
+  width: 100%;
+  height: 251px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card {
+  background: #F6F6F6;
+  padding: 0 13px 0 13px;
+  width: 100%;
+  box-sizing: border-box;
+  border-top-left-radius: 45px;
+  border-top-right-radius: 45px;
+  position: relative;
+  top: -50px;
+  box-sizing: border-box;
+  height: 100%;
+  margin-bottom: -50px;
+}
+.card__mainTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 20px;
+}
+.card__mainTitle h2 {
+  font-family: "Shrikhand", sans-serif;
+}
+.card__mainTitle label {
+  padding-right: 40px;
+}
+.card__menu--text-main, .card__menu--text-composition {
+  display: block;
+}
+.card__menu--checkbox {
+  display: none;
+}
+.card__menu--checkbox:checked ~ .card__menu--textAnimation span::after {
+  opacity: 1;
+  width: 59px;
+  transform: translateX(60px);
+}
+.card__menu--checkbox:checked ~ .card__menu--textAnimation {
+  display: flex;
+  transform: translateX(-60px);
+  height: 100%;
+  align-items: center;
+  transition: transform 0.4s;
+}
+.card__menu--checkbox:not(:checked) ~ .card__menu--textAnimation {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  transition: transform 0.4s;
+}
+.card__menu--checkbox:not(:checked) ~ .card__menu--textAnimation span::before {
+  opacity: 1;
+  width: 0px;
+}
+.card__menu .card__menu--textAnimation span::after {
+  content: url(../../Assets/images/picto/circle-check-solid.svg);
+  background-color: #99E2D0;
+  background-size: cover;
+  width: 0px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+}
+.card__menu .card__menu--textAnimation span::before {
+  content: "";
+  background-color: var(--green-color);
+  background-size: cover;
+  width: 59px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  right: 0;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0 15px 15px 0;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: width 0.4s;
+}
+.card__menu--checkbox:checked ~ .card__menu--text span {
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card__mainTitle--bottom-heart::before {
+  content: url(../../Assets/images/picto/heart-solid.svg);
+  opacity: 1;
+  z-index: 1;
+}
+.card__mainTitle--bottom-heart::after {
+  content: url(../../Assets/images/picto/heart-regular.svg);
+  opacity: 0;
+  display: block;
+}
+.card__mainTitle--bottom-checkbox:checked ~ .card__mainTitle--bottom-heart::after {
+  opacity: 1;
+}
+.card__mainTitle--bottom-checkbox:checked ~ .card__mainTitle--bottom-heart::before {
+  display: none;
+}
+.card__mainTitle--bottom-heart {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  right: 0%;
+  cursor: pointer;
+  bottom: -10px;
+  left: -10px;
+}
+.card__mainTitle--bottom-checkbox {
+  display: none;
+}
+.card__menuTitle h3 {
+  display: flex;
+  text-transform: uppercase;
+  font-weight: 300;
+  position: relative;
+  padding-bottom: 20px;
+}
+.card__menuTitle h3::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  background-color: #99E2D0;
+  height: 2px;
+  bottom: 12px;
+  left: 0;
+}
+.card__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15px;
+  width: 100%;
+  height: 69px;
+  margin-bottom: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+}
+.card__menu--text-main {
+  font-weight: 500;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.card__menu--text-composition {
+  font-weight: 300;
+  font-size: 15px;
+  padding-left: 10px;
+}
+.card__menu--text + .card__menu--textAnimation span {
+  font-weight: 500;
+  font-size: 15px;
+  padding: 20px 10px 0 0;
+}
+.card__button {
+  display: flex;
+  justify-content: center;
+}
+.card__button a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(360deg, #9356dc 0%, #ff79da 100%);
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  position: relative;
+  margin: 30px 0 30px 0;
+}
+.card__button a:hover::after {
+  opacity: 0.2;
+}
+.card__button a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  opacity: 0;
+  z-index: -1;
+  border-radius: 25px;
+  transition: opacity 1s, box-shadow 0.3s;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+label {
+  position: relative;
+}
+
+.footer {
+  background-color: #353535;
+  color: #fff;
+  padding: 20px 0 30px 17px;
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+.footer a {
+  color: #fff;
+  font-weight: 300;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+.footer h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 18px;
+  padding-bottom: 15px;
+}
+.footer__icon {
+  display: flex;
+}
+.footer__icon a {
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer__icon i {
+  width: 10px;
+  height: 13px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    width: 80%;
+    left: 10%;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__mainTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .card__mainTitle .card__mainTitle--bottom-heart {
+    padding-left: 50px;
+  }
+  .card__menuTitle {
+    display: flex;
+    align-content: flex-start;
+    width: 630px;
+  }
+  .card__menu {
+    width: 634px;
+  }
+  .card__menu--checkbox:hover ~ .card__menu--textAnimation span::after {
+    opacity: 1;
+    width: 59px;
+    transform: translateX(60px);
+  }
+  .card__menu--checkbox:hover ~ .card__menu--textAnimation {
+    display: flex;
+    transform: translateX(-60px);
+    height: 100%;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  .card__menu--checkbox:not(:hover) ~ .card__menu--textAnimation {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    transition: transform 0.2s;
+  }
+  .card__menu--checkbox:not(:hover) ~ .card__menu--textAnimation span::before {
+    opacity: 1;
+    width: 0px;
+  }
+  .card__menu--checkbox:checked ~ .card__menu--text span {
+    max-width: 300px;
+  }
+  label#card__menuFirst, label#card__menuSecond, label#card__menuLast {
+    margin-bottom: 40px;
+  }
+  .mainHeader img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 383px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    height: 50px;
+    padding-bottom: 10px;
+  }
+  .footer h1 {
+    order: 4;
+    padding: 0 40px 0 80px;
+  }
+  .footer__icon {
+    padding-left: 10px;
+  }
+  body > main > footer > a:nth-child(4) {
+    padding: 0 10px 5px 50px;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1024px) {
+  .card {
+    width: 80%;
+    left: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card__mainTitle {
+    display: flex;
+    justify-content: center;
+  }
+  .card__mainTitle .card__mainTitle--bottom-heart {
+    padding-left: 50px;
+  }
+  .card__menuTitle {
+    display: flex;
+    align-content: flex-start;
+    width: 80%;
+  }
+  .card__menu {
+    width: 80%;
+  }
+  .card__menu--checkbox:checked ~ .card__menu--text span {
+    max-width: 100%;
+  }
+  label#card__menuFirst, label#card__menuSecond, label#card__menuLast {
+    margin-bottom: 40px;
+  }
+  .mainHeader img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 383px;
+  }
+}/*# sourceMappingURL=style-page.css.map */
