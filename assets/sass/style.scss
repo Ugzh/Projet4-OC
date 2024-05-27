@@ -60,73 +60,73 @@ h2 {
     padding-bottom: 10px;
   }
 
-// .loader{
-//     position: absolute;
-//     height: 100%;
-//     width: 100%;
-//     animation-name: bgTransition;
-//     animation-duration: 3s;
-//     animation-fill-mode: forwards;
-//     background-color: $main-bg-color;
-//     animation-delay: 2s;
-//     z-index: 9999;
-//     svg{
-//         position: relative;
-//         top: 40%;
-//         left: 40%;
-//         margin: auto;
-//         overflow: visible;
-//     }
-// }
+.loader{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    animation-name: bgTransition;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    background-color: $main-bg-color;
+    animation-delay: 2s;
+    z-index: 9999;
+    svg{
+        position: relative;
+        top: 40%;
+        left: 40%;
+        margin: auto;
+        overflow: visible;
+    }
+}
 
-// .o {
-//     animation-name: o;
-//     animation-duration: 4s;
-//     animation-delay: 2s;
-//     animation-fill-mode: forwards;
-//   }
+.o {
+    animation-name: o;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
   
-// .h {
-//     animation-name: h;
-//     animation-duration: 4.2s;
-//     animation-delay: 2s;
-//     animation-fill-mode: forwards;
-//   }
+.h {
+    animation-name: h;
+    animation-duration: 4.2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
 
-//   @keyframes bgTransition {
-//     0% {
-//       background-color: $main-bg-color;
-//       opacity: 1;
-//     }
+  @keyframes bgTransition {
+    0% {
+      background-color: $main-bg-color;
+      opacity: 1;
+    }
     
-//      100% {
-//         background-color: $main-bg-color;
-//         opacity: 0;
-//         display: none;
-//     }
-// }
+     100% {
+        background-color: $main-bg-color;
+        opacity: 0;
+        display: none;
+    }
+}
 
-// @keyframes o {
-//     0% {
-//         transform: translate(0, 0) scale(1);
-//     }
-//      100% {
-//         transform: translate(-190%, -190%) rotate(2deg) scale(8);
-//         opacity: 0;
-//         display: none;
-//     }
-// }
+@keyframes o {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+     100% {
+        transform: translate(-190%, -190%) rotate(2deg) scale(8);
+        opacity: 0;
+        display: none;
+    }
+}
 
-// @keyframes h {
-//     0% {
-//         transform: translate(0, 0);
-//     }
-//      100% {
-//         transform: translate(95%, -160%) rotate(7deg) scale(6);
-//         opacity: 0;
-//         display: none;
-//     }
-// }
+@keyframes h {
+    0% {
+        transform: translate(0, 0);
+    }
+     100% {
+        transform: translate(95%, -160%) rotate(7deg) scale(6);
+        opacity: 0;
+        display: none;
+    }
+}
 
 .header {
     background-color: $main-bg-color;
