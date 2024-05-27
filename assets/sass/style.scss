@@ -338,12 +338,12 @@ h2 {
     right:0%;
     cursor: pointer;
     &::before{
-        content: url(../../Assets/images/picto/heart-solid.svg);
+        content: url(../../assets/images/picto/heart-solid.svg);
         opacity: 1;
         z-index: 1;
     }
     &::after{
-        content: url(../../Assets/images/picto/heart-regular.svg);
+        content: url(../../assets/images/picto/heart-regular.svg);
         opacity: 0;
         display: block;
     }
